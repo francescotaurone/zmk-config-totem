@@ -50,6 +50,16 @@
             key-positions = <16 17 18>;
             timeout-ms = <100>;
         };
+
+        smilecombo {
+            bindings = <&smile>;
+            key-positions = <16 17>;
+        };
+
+        winkcombo {
+            bindings = <&wink>;
+            key-positions = <17 18>;
+        };
     };
 
     macros {
@@ -68,18 +78,20 @@
                 <&kp G &kp I &kp F>;
         };
 
-        copy: copy {
+        smile: smile {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(C)>;
-            label = "COPY";
+            bindings = <&macro_tap>, <&kp COLON &kp RIGHT_PARENTHESIS>;
+
+            label = "SMILE";
         };
 
-        paste: paste {
+        wink: wink {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(V)>;
-            label = "PASTE";
+            bindings = <&macro_tap>, <&kp SEMICOLON &kp RIGHT_PARENTHESIS>;
+
+            label = "WINK";
         };
     };
 
