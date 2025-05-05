@@ -50,6 +50,18 @@
             key-positions = <16 17 18>;
             timeout-ms = <100>;
         };
+
+        copy {
+            bindings = <&copy>;
+            key-positions = <20 24>;
+            layers = <2>;
+        };
+
+        paste {
+            bindings = <&paste>;
+            key-positions = <20 25>;
+            layers = <2>;
+        };
     };
 
     macros {
@@ -66,6 +78,20 @@
                 <&kp LSHFT>,
                 <&macro_tap>,
                 <&kp G &kp I &kp F>;
+        };
+
+        copy: copy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(C)>;
+            label = "COPY";
+        };
+
+        paste: paste {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(V)>;
+            label = "PASTE";
         };
     };
 
@@ -91,10 +117,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-           &kp Q  &kp W  &kp E    &kp R    &kp T        &kp Y          &kp U        &kp I        &kp O       &kp P
-           &kp A  &kp S  &kp D    &kp F    &kp G        &kp H          &mt RSHFT J  &mt RCTRL K  &mt RALT L  &mt RGUI SEMI
-&kp LSHFT  &kp Z  &kp X  &kp C    &kp V    &kp B        &kp N          &kp M        &kp COMMA    &kp DOT     &kp FSLH       &kp BSLH
-                         &kp TAB  &mo NAV  &kp SPACE    &kp BACKSPACE  &mo SYM      &kp GRAVE
+           &kp Q  &kp W  &kp E    &kp R    &kp T        &kp Y          &kp U    &kp I      &kp O    &kp P
+           &kp A  &kp S  &kp D    &kp F    &kp G        &kp H          &kp J    &kp K      &kp L    &mt RGUI SEMI
+&kp LSHFT  &kp Z  &kp X  &kp C    &kp V    &kp B        &kp N          &kp M    &kp COMMA  &kp DOT  &kp FSLH       &kp BSLH
+                         &kp TAB  &mo NAV  &kp SPACE    &kp BACKSPACE  &mo SYM  &kp GRAVE
             >;
         };
 
@@ -143,10 +169,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp EXCL     &kp AT       &kp HASH   &kp DLLR  &kp PRCNT    &kp CARET     &kp AMPS        &kp RA(U)   &kp SQT     &kp DQT
-        &kp RA(A)    &trans       &kp RA(S)  &trans    &trans       &kp C_MUTE    &kp LS(RA(N4))  &kp RA(N5)  &kp RA(N4)  &kp RA(O)
-&trans  &kp RA(F18)  &kp RA(F19)  &trans     &trans    &trans       &kp C_VOL_DN  &kp C_VOL_UP    &kp C_PREV  &kp C_NEXT  &kp BSLH   &trans
-                                  &trans     &mo 3     &kp DEL      &trans        &kp C_PP        &trans
+        &kp EXCL     &kp AT       &kp HASH   &kp DLLR  &kp PRCNT    &kp CARET     &kp AMPS         &kp RA(U)   &kp SQT        &kp DQT
+        &kp RA(A)    &trans       &kp RA(S)  &trans    &trans       &kp C_MUTE    &kp RIGHT_SHIFT  &kp RCTRL   &kp RIGHT_ALT  &kp RIGHT_WIN
+&trans  &kp RA(F18)  &kp RA(F19)  &trans     &trans    &trans       &kp C_VOL_DN  &kp C_VOL_UP     &kp C_PREV  &kp C_NEXT     &kp C_PP       &trans
+                                  &trans     &mo 3     &kp DEL      &trans        &trans           &trans
             >;
         };
 
