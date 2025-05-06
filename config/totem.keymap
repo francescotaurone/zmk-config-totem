@@ -65,7 +65,6 @@
             bindings = <&kp BACKSPACE>;
             key-positions = <16 15>;
             timeout-ms = <50>;
-            layers = <0>;
         };
 
         gamelayer {
@@ -75,10 +74,15 @@
         };
 
         backspacealt {
-            bindings = <&kp LA(BACKSPACE)>;
-            key-positions = <16 15>;
+            bindings = <&kp RA(BACKSPACE)>;
+            key-positions = <16 15 17>;
             timeout-ms = <50>;
-            layers = <1>;
+        };
+
+        backspaceline {
+            bindings = <&kp RG(BACKSPACE)>;
+            key-positions = <16 15 17 18>;
+            timeout-ms = <50>;
         };
     };
 
