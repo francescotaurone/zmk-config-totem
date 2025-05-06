@@ -66,6 +66,12 @@
             key-positions = <16 15>;
             timeout-ms = <50>;
         };
+
+        gamelayer {
+            bindings = <&tog 4>;
+            key-positions = <22 23 24>;
+            timeout-ms = <100>;
+        };
     };
 
     macros {
@@ -218,7 +224,7 @@
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-        tvp1_layer {
+        game {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
             label = "TVP 1";
@@ -235,10 +241,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &kp TAB    &kp I      &kp LC(LALT)  &kp O        &kp LC(F20)    &none  &none  &none  &none  &none
-       &lt 5 L    &kp LEFT   &kp LALT      &kp RIGHT    &kp SPACE      &none  &none  &none  &none  &none
-&kp J  &kp LSHFT  &kp LC(C)  &kp BSPC      &kp LC(V)    &kp LC(F19)    &none  &none  &none  &none  &none  &none
-                             &trans        &kp LC(F14)  &kp LC(F13)    &none  &none  &none
+       &kp TAB    &kp Q      &kp UP_ARROW  &kp E        &kp LC(F20)    &none  &none  &none  &none  &none
+       &lt 5 L    &kp LEFT   &kp DOWN      &kp RIGHT    &kp SPACE      &none  &none  &none  &none  &none
+&kp J  &kp LSHFT  &kp LC(C)  &none         &kp LC(V)    &kp LC(F19)    &none  &none  &none  &none  &none  &none
+                             &trans        &kp LC(F14)  &kp SPACE      &none  &none  &none
             >;
         };
 
