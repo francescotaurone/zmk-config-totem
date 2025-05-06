@@ -62,7 +62,7 @@
         };
 
         backspacecombo {
-            bindings = <&kp RETURN>;
+            bindings = <&kp BACKSPACE>;
             key-positions = <16 15>;
             timeout-ms = <50>;
         };
